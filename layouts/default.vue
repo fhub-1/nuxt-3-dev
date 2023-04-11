@@ -55,11 +55,7 @@
       <slot />
     </div>
     <Footer />
-    <button @click="toggleDarkMode" class="bg-gray-300 dark:bg-gray-600 rounded-full p-2">
-      <span class="text-gray-800 dark:text-gray-300">
-        {{ darkMode ? 'Light' : 'Dark' }}
-      </span>
-    </button>
+
   </div>
 </template>
 
@@ -72,14 +68,7 @@ export default {
       logo: "/logo-light.svg",
       logoWidth: 60,
       logoHeight: 30,
-      darkMode: false
     };
-  },
-  methods: {
-    toggleDarkMode() {
-      this.darkMode = !this.darkMode;
-      document.documentElement.classList.toggle('dark');
-    },
   },
   computed: {
     logoSrc() {
