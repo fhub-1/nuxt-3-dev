@@ -13,7 +13,7 @@
 
       <div class="grid grid-cols-1 mt-8 md:mt-20 gap-y-6 md:grid-cols-2 gap-x-10">
         <div>
-          <img class="w-auto mx-auto sm:max-w-xs rounded-md" src="/profile.JPG" alt="banner" />
+          <img class="w-auto mx-auto sm:max-w-xs rounded-md" src="/profile.jpg" alt="banner" />
           <h1 class="m-10 p-10 text-2xl">some social links</h1>
         </div>
 
