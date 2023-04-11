@@ -2,6 +2,7 @@
 title: The Latest Features Added to JavaScript in ECMAScript 2020
 description: JavaScript is one of the most popular programming languages, and features are now added to the language every year. This article covers new features added in ECMAScript 2020, also known as ES11.
 slug: the-latest-features-added-to-javascript-in-ecmascript-2020
+date: 20/10/2023
 ---
 
 JavaScript is one of the most popular programming languages, and features are now added to the language every year. This article covers new features added in ECMAScript 2020, also known as ES11.

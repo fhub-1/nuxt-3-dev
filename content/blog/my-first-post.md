@@ -2,6 +2,7 @@
 title: My First Blog Post
 date: 2023-04-05
 description: This is my first blog post using Markdown in Nuxt 3.
+authName: joseph kitheka
 ---
 
 # Hello World!
