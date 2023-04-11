@@ -1,22 +1,19 @@
 <template>
-  <div>
-    <h1>My Blog</h1>
-    <ul>
-      <li v-for="post in posts" :key="post.slug">
-        <nuxt-link :to="`/blog/${post.slug}`">{{ post.title }}</nuxt-link>
-        <p>{{ post.description }}</p>
-      </li>
-    </ul>
+  <div class="px-6 py-4">
+    <h2 class="text-xl font-semibold text-gray-100 mb-2">Blog post title</h2>
+    <p class="text-gray-100 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+      ornare diam.</p>
   </div>
+  <ul>
+    <li v-for="{ _path: slug, title } in blogPosts" :key="slug">
+      <NuxtLink :to="slug">{{ title }}</NuxtLink>
+    </li>
+  </ul>
 </template>
 
-<script>
-export default {
-  async asyncData() {
-    const posts = await this.$content("blog").sortBy("date", "desc").fetch();
-    return {
-      posts,
-    };
-  },
-};
+<script setup lang="ts">
+const blogPosts = await queryContent('/blog')
+  .sort({ date: -1 }) // show latest articles first
+  .where({ _partial: false }) // exclude the Partial files
+  .find()
 </script>
